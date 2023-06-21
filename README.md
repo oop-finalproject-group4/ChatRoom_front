@@ -1,4 +1,13 @@
 # ChatRoom_front
+## 專案管理
+- 使用`maven`作為專案的package以及依賴管理工具
+- 要自己編譯成jar檔案的話需要使用maven build
+- 環境使用
+  - java 17
+  - java sdk 17
+  - javafx 16
+  - javafx sdk 16
+  - 皆寫於pom.xml之中
 ## 操作
 - jar檔案：存於google drive
   - https://drive.google.com/drive/folders/1BBqQE1fB3WuUw2usb5OK_pjGB2nwXPox?usp=drive_link
