@@ -19,11 +19,13 @@
 
 - 預設為不會自動更新，避免資源消耗過多(AWS要錢)
 - 若要啟用自動更新功能，建議透過code更改PageController中的
-```java=29
+  - @`line 29`
+```
 update_immediate = false
 ```
   - 改為
-  - `update_immediate = true`
+```update_immediate = true
+```
   - 再編譯
 - 或者使用按鈕開啟該功能也行
 ## ChatGPT功能
