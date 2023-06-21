@@ -1,9 +1,7 @@
 package oopfinalproject.ChatRoomMainPage06181148;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,7 +10,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-
 public class API {
     //你的Token 用來安全連線
     private static String token = null;
@@ -36,7 +33,7 @@ public class API {
         // Example：登入後取得自己的chatrooms
         int resCode = API.login("bob", "87654321"); //有這個帳號
 //        int resCode = API.login("randomDude", "43457423905"); //沒這個帳號
-//        Websocket.connectionWebsocket(); //詳見Websocket.java --> 更新：先不要連 有問題
+//        Websocket.connectionWebsocket(); //詳見Websocket.java
         if(resCode == 200){
             //登入成功
         }else{
@@ -45,26 +42,8 @@ public class API {
             System.out.println(errorMessage);
         }
         API.viewChatHistoryByFriend("alice");
-//        Websocket.disconnectWebsocket();  --> 更新：先不要連 有問題
+//        Websocket.disconnectWebsocket();
         API.logout();
-        //取得回傳物件的方法如指定題，這邊貼給你
-
-        //下一步：取得剛剛API互叫的結果資料
-        // 看response回傳的是object還是array(我下面每個API有寫他回傳的東西，如果沒寫他就是post，只會回傳是否成功)
-        // 決定你們要呼叫getResultObject()還是getResultArray()
-
-        //這邊用getResultObject()因為login會傳的是object
-        //取得id這個attribute，因為type是int所以用getInt()
-        //int id = API.getResultObject().getInt("id");
-        //取得renter這個attribute(boolean)
-        //boolean isRenter = API.getResultObject().getBoolean("renter");
-        //...
-        //回傳array所以使用getResultArray()
-        //取得第0項紀錄的方法，每一項紀錄都是一個JSONObject
-        //JSONObject FirstObject = API.getResultArray().getJSONObject(0); //裡面填index
-        //JSONObject跟上面object的呼叫attribute的方法一樣
-        //System.out.println(FirstObject.getDouble("start_lat"));
-
     }
 
     //筆記：
@@ -217,7 +196,7 @@ public class API {
 
     ////////////////////////////////下面的code已經寫好，盡量不要動到/////////////////////////////////
 
-    protected static String getId(){
+    public static String getId(){
         return  id;
     }
     private static void setId(String value){
@@ -228,7 +207,7 @@ public class API {
         token = value;
     }
 
-    protected static String getToken() {
+    public static String getToken() {
         return token;
     }
 

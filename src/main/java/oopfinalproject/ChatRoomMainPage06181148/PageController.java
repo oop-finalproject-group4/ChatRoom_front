@@ -137,14 +137,16 @@ public class PageController {
 	
 	update_thread thread;
 	public String myId;
-	private int currentRoomId = -1;
+	public int currentRoomId = -1;
 
-	private String currentFriendId = null;
+	public String currentFriendId = null;
+	public String currentFriendName = null;
 
 	@FXML
 	public void initialize() {
 		// Execute your function when the page is first loaded
 		About_You(null);
+		Websocket.connectionWebsocket(this);
 	}
 	public void updateontime(MouseEvent e) {
 		// 因為即時更新會使得AWS雲端的收發量大量上漲，導致收費增加，因此選擇開啟或關閉自動更新。
@@ -940,19 +942,20 @@ public class PageController {
     	}
     	// 如果設定及時新，在開始跑即時更新功能
     	currentRoomId = Integer.parseInt(id);
-    	if(update_immediate) {
-    		
-	    	try {
-	    		thread= new update_thread(this, currentRoomId);
-	    		thread.start_update(this, currentRoomId);
-	    		thread.start();
-	    		// 設定即時更新的執行緒並開始工作
-	    	}catch (Exception e) {
-	    		System.out.println(e.toString());
-	    	}
-    	}
+//    	if(update_immediate) {
+//
+//	    	try {
+//	    		thread= new update_thread(this, currentRoomId);
+//	    		thread.start_update(this, currentRoomId);
+//	    		thread.start();
+//	    		// 設定即時更新的執行緒並開始工作
+//	    	}catch (Exception e) {
+//	    		System.out.println(e.toString());
+//	    	}
+//    	}
 	    // 將聊天室從朋友狀態切為聊天室狀態
 		currentFriendId = null;
+		currentFriendName = null;
     	try {
     		// 設定聊天室名稱
 			int roomId = Integer.parseInt(id);
@@ -989,6 +992,7 @@ public class PageController {
     	System.out.println(name);
     	System.out.println(id);
 		currentFriendId = id;
+		currentFriendName = name;
 		currentRoomId = -1;
     	try {
 			generate_message_block(id);
@@ -1033,6 +1037,7 @@ public class PageController {
     public void logout(MouseEvent event)throws IOException {
     	// 登出，並跳轉回主畫面
         API.logout();
+		Websocket.disconnectWebsocket();
         try {
     		thread.stop_update();    		
     	}catch (Exception error_of_thread) {

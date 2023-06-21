@@ -67,7 +67,7 @@ public class update_thread extends Thread{
 		// 開始更新資料
 	}
 	JSONArray messages;
-	private void update_Data() {
+	public void update_Data() {
 		// 更新資料，透過檢查room id是否存在再去決定是否要繼續跑
 		int res = API.viewChatHistory(chatroom_id);
 		if(res != 200){
