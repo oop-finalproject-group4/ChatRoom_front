@@ -1,0 +1,1006 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="600.0" maxWidth="800.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopfinalproject.ChatRoomMainPage06181148.PageController">
+   <children>
+      <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0">
+         <left>
+            <VBox minWidth="120.0" prefHeight="600.0" prefWidth="170.0" style="-fx-background-color: #363636;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button alignment="TOP_LEFT" defaultButton="true" lineSpacing="2.0" mnemonicParsing="false" onMouseClicked="#About_You" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #404040;" text="About You" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/default_user.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                  </Button>
+                  <Label prefHeight="20.0" prefWidth="223.0" text="Community" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Button alignment="TOP_LEFT" defaultButton="true" lineSpacing="2.0" mnemonicParsing="false" onMouseClicked="#Chat_Room" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #404040;" text="Chat Room" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/chat_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="TOP_LEFT" defaultButton="true" lineSpacing="2.0" mnemonicParsing="false" onMouseClicked="#Friends" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #404040;" text="Friends" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/friend_icon.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button alignment="TOP_LEFT" defaultButton="true" lineSpacing="2.0" mnemonicParsing="false" onMouseClicked="#Groups" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #404040;" text="Groups" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/group.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button alignment="TOP_LEFT" defaultButton="true" lineSpacing="2.0" mnemonicParsing="false" onMouseClicked="#Add_Friend" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #404040;" text="Add Friend" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/add_friend.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label prefHeight="20.0" prefWidth="223.0" text="Additional Function" textFill="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button alignment="TOP_LEFT" defaultButton="true" lineSpacing="2.0" mnemonicParsing="false" onMouseClicked="#Add_API_Key" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #404040;" text="Add API key" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/chatgpt.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Label prefHeight="20.0" prefWidth="223.0" text="Setting" textFill="WHITE">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Button alignment="TOP_LEFT" defaultButton="true" lineSpacing="2.0" mnemonicParsing="false" onMouseClicked="#Setting" prefHeight="40.0" prefWidth="250.0" style="-fx-background-color: #404040;" text="Setting" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/setting.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+                  <CheckBox fx:id="updateontime_box" mnemonicParsing="false" onMouseClicked="#updateontime" text="UpdateOnTime" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </CheckBox>
+                  <Button alignment="TOP_LEFT" defaultButton="true" lineSpacing="2.0" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="50.0" prefWidth="110.0" style="-fx-background-color: #404040;" text="Logout" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+         </left>
+         <right>
+            <Pane prefHeight="600.0" prefWidth="320.0" style="-fx-background-color: #323232;" BorderPane.alignment="CENTER">
+               <children>
+                  <SplitPane fx:id="chatroom" dividerPositions="0.8160535117056856" minWidth="159.0" orientation="VERTICAL" prefHeight="600.0" prefWidth="320.0" style="-fx-background-color: #353535;">
+                     <items>
+                        <VBox prefHeight="403.0" prefWidth="320.0">
+                           <children>
+                              <Pane prefHeight="59.0" prefWidth="318.0" style="-fx-background-color: #353535;">
+                                 <children>
+                                    <ImageView fitHeight="50.0" fitWidth="50.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/default_user.png" />
+                                       </image></ImageView>
+                                    <Label fx:id="chatroom_name" layoutX="58.0" layoutY="16.0" text="Chatroom_name" textFill="WHITE">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                    </Label>
+                                 </children></Pane>
+                              <ScrollPane fx:id="chatroom_scrollpane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="150.0" minWidth="-Infinity" prefHeight="362.0" prefWidth="318.0" style="-fx-background-color: #353535;">
+                                 <content>
+                                    <VBox fx:id="chatroom_messeage_vbox" prefHeight="362.0" prefWidth="313.0" style="-fx-background-color: #353535;" />
+                                 </content>
+                              </ScrollPane>
+                              <Pane onMouseClicked="#chatgpt_reply" prefHeight="59.0" prefWidth="318.0">
+                                 <children>
+                                    <ImageView fitHeight="37.0" fitWidth="37.0" layoutX="7.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/chatgpt.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="54.0" layoutY="1.0" prefHeight="20.0" prefWidth="250.0" text="Generate GPT Recommand Reply" textFill="WHITE">
+                                       <font>
+                                          <Font size="16.0" />
+                                       </font></Label>
+                                    <TextField layoutX="253.0" layoutY="30.0" prefHeight="30.0" prefWidth="51.0" text="3" />
+                                    <Label layoutX="63.0" layoutY="31.0" prefHeight="20.0" prefWidth="192.0" text="Read # of message above" textFill="WHITE" />
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding></Pane>
+                           </children>
+                        </VBox>
+                        <TextArea fx:id="messeage_in" onKeyPressed="#messeage_in_enter" prefHeight="100.0" prefWidth="318.0" />
+                     </items>
+                  </SplitPane>
+                  <Pane fx:id="chatgpt_setting_pane" minWidth="159.0" prefHeight="600.0" prefWidth="320.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="85.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/chatgpt.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="119.0" layoutY="216.0" text="API key" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="chatgpt_api_in" layoutX="42.0" layoutY="278.0" onKeyPressed="#chatgpt_api_enter" prefHeight="30.0" prefWidth="237.0" promptText="Enter API Key" />
+                        <Label alignment="CENTER" layoutX="90.0" layoutY="387.0" text="Your API key" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="chatgpt_apikey_show" alignment="CENTER" layoutX="2.0" layoutY="439.0" prefHeight="24.0" prefWidth="316.0" text="Your API key" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="bing_setting_pane" minWidth="159.0" prefHeight="600.0" prefWidth="320.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="85.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/bing.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="119.0" layoutY="216.0" text="API key" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="bing_api_in" layoutX="42.0" layoutY="278.0" onKeyPressed="#bing_api_enter" prefHeight="30.0" prefWidth="237.0" promptText="Enter API Key" />
+                        <Label alignment="CENTER" layoutX="90.0" layoutY="387.0" text="Your API key" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="bing_apikey_show" alignment="CENTER" layoutX="2.0" layoutY="439.0" prefHeight="24.0" prefWidth="316.0" text="Your API key" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="google_setting_pane" minWidth="159.0" prefHeight="600.0" prefWidth="320.0" visible="false">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="85.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/google.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="119.0" layoutY="216.0" text="API key" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="google_api_in" layoutX="42.0" layoutY="278.0" onKeyPressed="#google_api_enter" prefHeight="30.0" prefWidth="237.0" promptText="Enter API Key" />
+                        <Label alignment="CENTER" layoutX="90.0" layoutY="387.0" text="Your API key" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="google_apikey_show" alignment="CENTER" layoutX="2.0" layoutY="439.0" prefHeight="24.0" prefWidth="316.0" text="Your API key" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="add_friend_pane" minWidth="159.0" prefHeight="600.0" prefWidth="320.0" visible="false">
+                     <children>
+                        <Label alignment="CENTER" layoutX="25.0" layoutY="192.0" prefHeight="32.0" prefWidth="269.0" text="Search Friend ID" textFill="WHITE">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="add_friend_id_in" layoutX="43.0" layoutY="238.0" onKeyPressed="#add_friend_id_enter" prefHeight="30.0" prefWidth="237.0" promptText="Enter ID" />
+                        <Label alignment="CENTER" layoutX="130.0" layoutY="309.0" text="Search Result" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="TOP_LEFT" layoutX="3.0" layoutY="347.0" prefHeight="24.0" prefWidth="124.0" text="Friend Name:" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="result_name" alignment="TOP_LEFT" layoutX="125.0" layoutY="347.0" prefHeight="57.0" prefWidth="194.0" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button alignment="TOP_LEFT" defaultButton="true" layoutX="14.0" layoutY="486.0" lineSpacing="2.0" mnemonicParsing="false" onMouseClicked="#add_freind_check_buttom" prefHeight="50.0" prefWidth="102.0" style="-fx-background-color: #404040;" text="Add" textAlignment="CENTER" textFill="WHITE" textOverrun="CENTER_ELLIPSIS">
+                           <font>
+                              <Font name="Calibri" size="18.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="37.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/add_friend.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <padding>
+                              <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Button>
+                        <Label alignment="TOP_LEFT" layoutX="3.0" layoutY="416.0" prefHeight="24.0" prefWidth="124.0" text="Friend ID:" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="result_id" alignment="TOP_LEFT" layoutX="125.0" layoutY="416.0" prefHeight="57.0" prefWidth="194.0" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="136.0" fitWidth="121.0" layoutX="99.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/add_friend.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="TOP_CENTER" layoutX="112.0" layoutY="282.0" prefHeight="27.0" prefWidth="194.0" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="searching_id" layoutX="125.0" layoutY="282.0" prefHeight="27.0" prefWidth="194.0" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="3.0" layoutY="284.0" prefHeight="24.0" prefWidth="103.0" text="Searching:" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </right>
+         <center>
+            <StackPane prefHeight="600.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane id="friend_page" fx:id="chatroom_page" prefHeight="200.0" prefWidth="310.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="590.0" prefWidth="300.0" style="-fx-background-color: #282828;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" minWidth="119.0" prefHeight="600.0" prefWidth="310.0" style="-fx-background-color: #282828;" visible="false">
+                                 <children>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="220.0">
+                                                   <children>
+                                                      <Label prefWidth="220.0" text="張譯心" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="TOP_LEFT" prefHeight="65.0" prefWidth="220.0" text="奇萊北峰下屏風的路線規劃的怎麼樣" textFill="WHITE" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="220.0">
+                                                   <children>
+                                                      <Label prefWidth="220.0" text="臧逸新" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="TOP_LEFT" prefHeight="65.0" prefWidth="220.0" text="哪時候D-day" textFill="WHITE" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="220.0">
+                                                   <children>
+                                                      <Label prefWidth="220.0" text="李君毅" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="TOP_LEFT" prefHeight="65.0" prefWidth="220.0" text="不揪" textFill="WHITE" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="220.0">
+                                                   <children>
+                                                      <Label prefWidth="220.0" text="傅樂芸" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="TOP_LEFT" prefHeight="65.0" prefWidth="220.0" text="Scene Builder 已經閃退不只七次了我要發瘋了為什麼這麼麻煩" textFill="WHITE" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <VBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="220.0">
+                                                   <children>
+                                                      <Label prefWidth="220.0" text="Java 物件導向期末" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="18.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label alignment="TOP_LEFT" prefHeight="65.0" prefWidth="220.0" text="我恨JavaFX" textFill="WHITE" wrapText="true">
+                                                         <VBox.margin>
+                                                            <Insets top="10.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane id="friend" fx:id="friend_page" prefHeight="200.0" prefWidth="310.0" style="-fx-background-color: #282828;" visible="false">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="590.0" prefWidth="300.0" style="-fx-background-color: #282828;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" minWidth="119.0" prefHeight="600.0" prefWidth="310.0" style="-fx-background-color: #282828;">
+                                 <children>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label prefWidth="220.0" text="張譯心" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label prefWidth="220.0" text="臧逸新" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label prefWidth="220.0" text="傅樂芸" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label prefWidth="220.0" text="胖老爹公館" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label prefWidth="220.0" text="張譯心" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane id="friend_page" fx:id="groups_page" prefHeight="200.0" prefWidth="310.0" style="-fx-background-color: #282828;" visible="false">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="590.0" prefWidth="300.0">
+                           <children>
+                              <VBox alignment="TOP_CENTER" minWidth="119.0" prefHeight="600.0" prefWidth="310.0" style="-fx-background-color: #282828;" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane fx:id="personalinfo_page" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282828;">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="597.0" prefWidth="307.0" style="-fx-background-color: #282828;">
+                           <children>
+                              <ImageView fitHeight="139.0" fitWidth="174.0" layoutX="84.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/default_user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="166.0" prefHeight="32.0" prefWidth="309.0" text="Name" textFill="#807d7d">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="Username_userinfo" alignment="CENTER" layoutX="-1.0" layoutY="211.0" prefHeight="32.0" prefWidth="309.0" text="UserNameTest" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="267.0" prefHeight="32.0" prefWidth="309.0" text="UserID" textFill="#807d7d">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="313.0" prefHeight="32.0" prefWidth="309.0" text="testUserID" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="362.0" prefHeight="32.0" prefWidth="309.0" text="Email" textFill="#807d7d">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="413.0" prefHeight="32.0" prefWidth="309.0" text="testmail@gmail.com" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </ScrollPane>
+                  <ScrollPane fx:id="setting_page" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282828;" visible="false">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="597.0" prefWidth="307.0" style="-fx-background-color: #282828;">
+                           <children>
+                              <ImageView fitHeight="139.0" fitWidth="174.0" layoutX="84.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/default_user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="166.0" prefHeight="32.0" prefWidth="309.0" text="Name" textFill="#807c7c">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="211.0" prefHeight="32.0" prefWidth="309.0" text="UserNameTest" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="267.0" prefHeight="32.0" prefWidth="309.0" text="UserID" textFill="#807c7c">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="313.0" prefHeight="32.0" prefWidth="309.0" text="testUserID" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="362.0" prefHeight="32.0" prefWidth="309.0" text="Email" textFill="#807c7c">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="413.0" prefHeight="32.0" prefWidth="309.0" text="testmail@gmail.com" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="setting_persional_info_input" layoutX="4.0" layoutY="514.0" onKeyPressed="#setting_persional_info_enter" prefHeight="30.0" prefWidth="299.0" />
+                              <ChoiceBox fx:id="choicing" layoutX="75.0" layoutY="460.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane fx:id="addfriend_page" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282828;" visible="false">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="597.0" prefWidth="307.0" style="-fx-background-color: #282828;">
+                           <children>
+                              <ImageView fitHeight="139.0" fitWidth="174.0" layoutX="84.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/default_user.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="166.0" prefHeight="32.0" prefWidth="309.0" text="Name" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="211.0" prefHeight="32.0" prefWidth="309.0" text="UserNameTest" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="267.0" prefHeight="32.0" prefWidth="309.0" text="UserID" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="313.0" prefHeight="32.0" prefWidth="309.0" text="testUserID" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="362.0" prefHeight="32.0" prefWidth="309.0" text="Email" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <Label alignment="CENTER" layoutX="-1.0" layoutY="413.0" prefHeight="32.0" prefWidth="309.0" text="testmail@gmail.com" textFill="WHITE">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                              </Label>
+                              <TextField layoutX="4.0" layoutY="514.0" prefHeight="30.0" prefWidth="291.0" />
+                              <ChoiceBox layoutX="75.0" layoutY="460.0" prefWidth="150.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <ScrollPane fx:id="addapikey_page" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #282828;" visible="false">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="597.0" prefWidth="307.0" style="-fx-background-color: #282828;">
+                           <children>
+                              <VBox alignment="TOP_CENTER" minWidth="119.0" prefHeight="600.0" prefWidth="310.0" style="-fx-background-color: #282828;">
+                                 <children>
+                                    <Pane fx:id="google_apiset_pane" onMouseClicked="#google_setting" prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/google.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label prefWidth="220.0" text="Google" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="chatgpt_apiset_pane" onMouseClicked="#chatgpt_setting" prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/chatgpt.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label prefWidth="220.0" text="ChatGPT" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane fx:id="bing_apiset_pane" onMouseClicked="#bing_setting" prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/bing.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label prefWidth="220.0" text="Bing" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label prefWidth="220.0" text="null" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="95.0" prefWidth="310.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="95.0" prefWidth="310.0">
+                                             <children>
+                                                <ImageView fitHeight="37.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../img/default_user.png" />
+                                                   </image>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </ImageView>
+                                                <Label prefWidth="220.0" text="null" textFill="WHITE">
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+      <Label text="Label" />
+   </children>
+</AnchorPane>
