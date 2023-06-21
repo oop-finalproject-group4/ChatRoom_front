@@ -24,7 +24,8 @@
 update_immediate = false
 ```
   - 改為
-```update_immediate = true
+```
+update_immediate = true
 ```
   - 再編譯
 - 或者使用按鈕開啟該功能也行
